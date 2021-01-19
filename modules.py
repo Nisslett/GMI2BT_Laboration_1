@@ -1,17 +1,9 @@
 # functions
 
-def generate_numbers(num1 ,num2):
-    number_list=[]
-    limit=1000
-    for counter in range(limit):
-        if counter%num1==0 and counter%num2==0:
-            number_list.append(counter)
-    average=0
-    for item in number_list:
-        average+=item
-    return { "number_list":number_list , "average":average}
+#def generate_numbers(span_limit,devicable_list):
+    #for 
 
-def guessing_number():
+def guessing_numbers():
     limit_upper=100
     limit_lower=1
     from random import randint
@@ -24,7 +16,7 @@ def guessing_number():
         else:
             try_input=int(try_input)
         if try_input==rand_number:
-            print(f"WOOHOO you guess of {try_input} was correct. Congratualtions!")
+            print(f"WOOHOO you guess of {try_input} was correct. congratualtions!")
             break
         else:
             if rand_number>try_input:
