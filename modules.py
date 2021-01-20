@@ -1,10 +1,10 @@
 # functions
 
-def generate_divisible_numbers(num1 ,num2):
+def generate_divisible_numbers(number1 ,number2):
     number_list=[]
     limit=1000
     for counter in range(limit):
-        if counter%num1==0 and counter%num2==0:
+        if counter%number1==0 and counter%number2==0:
             number_list.append(counter)
     average=0
     for item in number_list:
@@ -24,7 +24,7 @@ def guessing_number():
         else:
             try_input=int(try_input)
         if try_input==rand_number:
-            print(f"WOOHOO you guess of {try_input} was correct. Congratualtions!")
+            print(f"WOOHOO!!! Your guess of {try_input} was correct. Congratualtions!")
             break
         else:
             if rand_number>try_input:
