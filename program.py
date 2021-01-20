@@ -2,10 +2,12 @@ import modules
 
 def input_number(text_value,error_text="Invalid input,input not a valid number!"):
     while True:
-        input_value = input(text_value)
-        if input_value.replace("-","").isdecimal():
-            return int(input_value)
-        print(error_text)
+        try:
+            input_value = int(input(text_value))
+        except ValueError:
+            print(error_text)
+            continue
+        return int(input_value)
         
 def input_greater_then_zero(text_value):
     while True:
