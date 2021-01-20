@@ -20,13 +20,11 @@ def guessing_number(limit_upper = 100, limit_lower = 1):
         if not try_input.isdigit():
             print("Input is not valid a number!")
             continue
-        else:
-            try_input = int(try_input)
+        try_input = int(try_input)
         if try_input>limit_upper or try_input<limit_lower:
             print(f"Input ({try_input}) is outside of scope ({limit_lower} to {limit_upper}) ")
             continue
-        else:
-            attempts+=1
+        attempts+=1
         if try_input == rand_number:
             print(f"WOOHOO!!! Your guess of {try_input} was correct. Congratualtions!, Attempts={attempts}")
             break

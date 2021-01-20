@@ -19,6 +19,9 @@ def divisable_numbers():
     number1 = input_not_zero("Input the first nubmer:")
     number2 = input_not_zero("Input the second nubmer:")
     print(modules.generate_divisible_numbers(number1, number2))
+    
+def press_any_key():
+    input("Press any key to continue . . .")
 
 def menu():
     while True:
@@ -27,8 +30,10 @@ def menu():
         choice = input_number("Input choice:",error_text)
         if choice == 1:
             divisable_numbers()
+            press_any_key()
         elif choice == 2:
             modules.guessing_number()
+            press_any_key()
         elif choice == 3:
             print("Exiting Menu.")
             break
