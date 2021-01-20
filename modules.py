@@ -1,15 +1,13 @@
 # Functions
-def generate_divisible_numbers(number1, number2,limit = 1001):
+def generate_divisible_numbers(number1, number2,limit = 1000):
     number_list = []
-    for counter in range(1, limit):
+    average = 0
+    for counter in range(1, limit + 1):
         if counter % number1 == 0 and counter % number2 == 0:
             number_list.append(counter)
-    average = 0
-    for item in number_list:
-        average += item
+            average+=counter
     average = average/len(number_list)
     return {"number_list": number_list, "average": average}
-
 
 def guessing_number(limit_upper = 100, limit_lower = 1):
     attempts = 0
