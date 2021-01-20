@@ -3,12 +3,13 @@
 def generate_divisible_numbers(number1 ,number2):
     number_list=[]
     limit=1000
-    for counter in range(limit):
+    for counter in range(1,limit):
         if counter%number1==0 and counter%number2==0:
             number_list.append(counter)
     average=0
     for item in number_list:
         average+=item
+    average=average/len(number_list)
     return { "number_list":number_list , "average":average}
 
 def guessing_number():
