@@ -14,6 +14,20 @@ def divisable_numbers():
     number2=input_number("Input the second nubmer:")
     print(modules.generate_divisible_numbers(number1,number2))
 
-divisable_numbers()
-modules.guessing_number()
+def menu():
+    while True:
+        print("1. Generate Divisable Numbers\n2. Guessing Game\n3. Exit")
+        choice=input_number("Input choice:")
+        if choice==1:
+            divisable_numbers()
+        elif choice==2:
+            modules.guessing_number()
+        elif choice==3:
+            print("Exiting Menu.")
+            return
+        else:
+            print("Invalid option! Try again.")
+
+menu()
+
 

@@ -32,4 +32,4 @@ def guessing_number():
                 hint="larger"
             else:
                 hint="smaller"
-            print(f"Your Guess was incorrect , the nubmer your looking for is {hint}.")
+            print(f"Your guess was incorrect , the nubmer your looking for is {hint}.")
