@@ -1,11 +1,11 @@
 import modules
 
-def input_number(text_value,errortext="Invalid input,input not a valid number!"):
+def input_number(text_value,error_text="Invalid input,input not a valid number!"):
     while True:
         input_value = input(text_value)
         if input_value.isdigit():
             return int(input_value)
-        print(errortext)
+        print(error_text)
         
 def input_not_zero(text_value):
     while True:
@@ -23,15 +23,16 @@ def divisable_numbers():
 def menu():
     while True:
         print("1. Generate Divisable Numbers\n2. Guessing Game\n3. Exit")
-        choice = input_number("Input choice:","Invalid option! Try again.")
+        error_text="Invalid option! Try again."
+        choice = input_number("Input choice:",error_text)
         if choice == 1:
             divisable_numbers()
         elif choice == 2:
             modules.guessing_number()
         elif choice == 3:
             print("Exiting Menu.")
-            return
+            break
         else:
-            print("Invalid option! Try again.")
+            print(error_text)
 
 menu()
