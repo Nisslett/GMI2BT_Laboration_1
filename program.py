@@ -1,6 +1,4 @@
-# UI (User Interface)
 import modules
-
 
 def input_number(text_value,errortext="Invalid input,input not a valid number!"):
     while True:
@@ -8,14 +6,19 @@ def input_number(text_value,errortext="Invalid input,input not a valid number!")
         if input_value.isdigit():
             return int(input_value)
         print(errortext)
-
+        
+def input_not_zero(text_value):
+    while True:
+        number=input_number(text_value)
+        if number!=0:
+            return number
+        print("Input can not be zero!")
 
 def divisable_numbers():
     print("Enter two numbers to find common divisable numbers up to 1000.")
-    number1 = input_number("Input the first nubmer:")
-    number2 = input_number("Input the second nubmer:")
+    number1 = input_not_zero("Input the first nubmer:")
+    number2 = input_not_zero("Input the second nubmer:")
     print(modules.generate_divisible_numbers(number1, number2))
-
 
 def menu():
     while True:
