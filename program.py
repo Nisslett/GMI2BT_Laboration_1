@@ -21,11 +21,11 @@ def divisable_numbers():
     print(modules.generate_divisible_numbers(number1, number2))
     
 def press_any_key():
-    input("Press any key to continue . . .\n")
+    input("Press any key to continue . . .")
 
 def menu():
     while True:
-        print("1. Generate Divisable Numbers\n2. Guessing Game\n3. Exit")
+        print("\n1. Generate Divisable Numbers\n2. Guessing Game\n3. Exit")
         error_text="Invalid option! Try again."
         choice = input_number("Input choice:",error_text)
         if choice == 1:
