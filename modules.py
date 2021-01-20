@@ -15,7 +15,7 @@ def guessing_number(limit_upper = 100, limit_lower = 1):
     rand_number = randint(limit_lower, limit_upper + 1)
     while True:
         try_input = input(f"Guess a number betwenne {limit_lower} to {limit_upper} :")
-        if not try_input.isdigit():
+        if not try_input.replace("-","").isdecimal():
             print("Input is not valid a number!")
             continue
         try_input = int(try_input)

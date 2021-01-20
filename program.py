@@ -3,7 +3,7 @@ import modules
 def input_number(text_value,error_text="Invalid input,input not a valid number!"):
     while True:
         input_value = input(text_value)
-        if input_value.isdigit():
+        if input_value.replace("-","").isdecimal():
             return int(input_value)
         print(error_text)
         
