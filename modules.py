@@ -19,7 +19,6 @@ def guessing_number(limit_upper = 100, limit_lower = 1):
         except ValueError:
             print("Input is not valid a number!")
             continue
-        try_input = int(try_input)
         if try_input>limit_upper or try_input<limit_lower:
             print(f"Input ({try_input}) is outside of the scope ({limit_lower} to {limit_upper}).")
             continue
