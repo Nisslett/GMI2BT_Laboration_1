@@ -21,7 +21,7 @@ def divisable_numbers():
     print(modules.generate_divisible_numbers(number1, number2))
     
 def press_any_key():
-    input("Press any key to continue . . .")
+    input("Press any key to continue . . .\n")
 
 def menu():
     while True:

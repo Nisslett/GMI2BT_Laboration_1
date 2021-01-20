@@ -22,7 +22,7 @@ def guessing_number(limit_upper = 100, limit_lower = 1):
             continue
         try_input = int(try_input)
         if try_input>limit_upper or try_input<limit_lower:
-            print(f"Input ({try_input}) is outside of scope ({limit_lower} to {limit_upper}) ")
+            print(f"Input ({try_input}) is outside of the scope ({limit_lower} to {limit_upper}).")
             continue
         attempts+=1
         if try_input == rand_number:
