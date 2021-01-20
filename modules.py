@@ -1,6 +1,6 @@
 # functions
 
-def generate_numbers(num1 ,num2):
+def generate_divisible_numbers(num1 ,num2):
     number_list=[]
     limit=1000
     for counter in range(limit):
@@ -18,8 +18,8 @@ def guessing_number():
     rand_number=randint(limit_lower,limit_upper)
     while True:
         try_input=input(f"Guess a number betwenne {limit_lower} to {limit_upper} :")
-        if not try_input.isnumeric():
-            print("Input is not numeric!")
+        if not try_input.isdigit():
+            print("Input is not a number!")
             continue
         else:
             try_input=int(try_input)
