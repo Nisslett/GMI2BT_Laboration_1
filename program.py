@@ -7,17 +7,17 @@ def input_number(text_value,error_text="Invalid input,input not a valid number!"
             return int(input_value)
         print(error_text)
         
-def input_not_zero(text_value):
+def input_greater_then_zero(text_value):
     while True:
         number=input_number(text_value)
-        if number!=0:
+        if number>0:
             return number
-        print("Input can not be zero!")
+        print("Input must be more then zero!")
 
 def divisable_numbers():
     print("Enter two numbers to find common divisable numbers up to 1000.")
-    number1 = input_not_zero("Input the first nubmer:")
-    number2 = input_not_zero("Input the second nubmer:")
+    number1 = input_greater_then_zero("Input the first nubmer:")
+    number2 = input_greater_then_zero("Input the second nubmer:")
     print(modules.generate_divisible_numbers(number1, number2))
     
 def press_any_key():
